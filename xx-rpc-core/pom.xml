@@ -2,32 +2,19 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.xx</groupId>
-  <artifactId>provider</artifactId>
+  <artifactId>xx-rpc-core</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Archetype - provider</name>
+  <name>Archetype - xx-rpc-core</name>
   <url>http://maven.apache.org</url>
-
 
 
   <dependencies>
 
-
+    <!-- https://mvnrepository.com/artifact/io.vertx/vertx-core -->
     <dependency>
-      <groupId>com.xx</groupId>
-      <artifactId>easyrpc</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.xx</groupId>
-      <artifactId>xx-rpc-core</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.xx</groupId>
-      <artifactId>common</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-core</artifactId>
+      <version>4.5.1</version>
     </dependency>
     <!-- https://doc.hutool.cn/ -->
     <dependency>
@@ -42,8 +29,21 @@
       <version>1.18.30</version>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.3.12</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>RELEASE</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
 
 </project>
-

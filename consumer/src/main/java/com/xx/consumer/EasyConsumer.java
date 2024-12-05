@@ -1,7 +1,7 @@
 package com.xx.consumer;
 
 
-import com.xx.easyrpc.proxy.ServiceProxyFactory;
+import com.xx.corerpc.proxy.ServiceProxyFactory;
 import com.xx.model.User;
 import com.xx.service.UserService;
 
@@ -24,6 +24,7 @@ public class EasyConsumer {
 //            System.out.println("调用失败！");
 //        }
 
+/*
         // 静态代理
         UserService userService1 = new UserServiceProxy();
         User user1 = new User();
@@ -35,6 +36,22 @@ public class EasyConsumer {
         User user2 = new User();
         user2.setName("动态代理");
         userService2.getUser(user2);
+*/
+        // 获取代理
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
+        User user = new User();
+        user.setName("xx");
+
+        // 调用
+        User newUser = userService.getUser(user);
+        if(newUser != null){
+            System.out.println(newUser.getName());
+        }else{
+            System.out.println("user == null");
+        }
+        short number = userService.getNumber();
+        System.out.println(number);
+
 
     }
 }
