@@ -3,10 +3,12 @@ package com.xx.corerpc.proxy;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
+import com.xx.corerpc.RpcApplication;
 import com.xx.corerpc.model.RpcRequest;
 import com.xx.corerpc.model.RpcResponse;
 import com.xx.corerpc.serializer.JdkSerializer;
 import com.xx.corerpc.serializer.Serializer;
+import com.xx.corerpc.serializer.SerializerFactory;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
@@ -26,7 +28,12 @@ public class ServiceProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         // 指定序列化器
-        Serializer serializer = new JdkSerializer();
+        // Serializer serializer = new JdkSerializer();
+
+        // 指定序列化器
+        final Serializer serializer = SerializerFactory.getInstance(RpcApplication.getRpcConfig().getSerializer());
+
+        System.out.println("消费者指定的序列化器为：" + serializer);
 
         // 构造请求
         RpcRequest rpcRequest = RpcRequest.builder()

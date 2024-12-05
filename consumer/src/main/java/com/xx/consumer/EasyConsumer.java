@@ -40,7 +40,7 @@ public class EasyConsumer {
         // 获取代理
         UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
-        user.setName("xx");
+        user.setName("动态代理！");
 
         // 调用
         User newUser = userService.getUser(user);
@@ -49,7 +49,8 @@ public class EasyConsumer {
         }else{
             System.out.println("user == null");
         }
-        short number = userService.getNumber();
+        int number = userService.getNumber();
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         System.out.println(number);
 
 

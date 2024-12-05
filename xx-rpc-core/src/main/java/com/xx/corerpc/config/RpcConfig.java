@@ -1,6 +1,7 @@
 package com.xx.corerpc.config;
 
 
+import com.xx.corerpc.serializer.SerializerKeys;
 import lombok.Data;
 import lombok.Lombok;
 
@@ -36,7 +37,12 @@ public class RpcConfig {
 //    如果字段名以 "is" 开头,Lombok 会直接使用字段名作为 getter 方法名
 //    如果字段名不以 "is" 开头,
 //    Lombok 会自动生成 "is" + 首字母大写的字段名作为 getter 方法名
-    private boolean mock = true;
+    private boolean mock = false;
+
+    /**
+     * 序列化器
+     */
+    private String serializer = SerializerKeys.JDK;
 
 
 }

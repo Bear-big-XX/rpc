@@ -10,7 +10,8 @@ public class ExtendConsumer {
 
 
     public static void main(String[] args) {
-        RpcConfig rpc = ConfigUtils.loadConfig(RpcConfig.class, "xx");
+        // 测试动态加载配置，该模块的application.properties文件会覆盖corerpc模块中的application.properties文件
+        RpcConfig rpc = ConfigUtils.loadConfig(RpcConfig.class, "yy");
         System.out.println(rpc);
     }
 }

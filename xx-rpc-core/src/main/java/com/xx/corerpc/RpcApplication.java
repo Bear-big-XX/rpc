@@ -23,7 +23,7 @@ public class RpcApplication {
      */
     public static void init(RpcConfig newRpcConfig) {
         rpcConfig = newRpcConfig;
-        log.info("rpc init, config = {}", newRpcConfig.toString());
+        log.info("rpc 初始化成功, config = {}", newRpcConfig.toString());
     }
 
     /**
@@ -50,6 +50,7 @@ public class RpcApplication {
             synchronized (RpcApplication.class) {
                 if (rpcConfig == null) {
                     init();
+                    System.out.println("rpcConfig的配置是：" + rpcConfig);
                 }
             }
         }
