@@ -1,0 +1,2 @@
+etcd=com.xx.corerpc.registry.EtcdRegistry
+zookeeper=com.xx.corerpc.registry.ZookeeperRegistry

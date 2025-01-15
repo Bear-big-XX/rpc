@@ -1,0 +1,3 @@
+hessian=com.xx.corerpc.serializer.HessianSerializer
+json=com.xx.corerpc.serializer.JsonSerializer
+kryo=com.xx.corerpc.serializer.KryoSerializer

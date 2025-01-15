@@ -1,0 +1,10 @@
+com\xx\easyrpc\server\HttpServer.class
+com\xx\easyrpc\server\VertxHttpServer.class
+com\xx\easyrpc\model\RpcResponse$RpcResponseBuilder.class
+com\xx\easyrpc\serializer\Serializer.class
+com\xx\easyrpc\serializer\JdkSerializer.class
+com\xx\easyrpc\server\HttpServerHandler.class
+com\xx\easyrpc\registry\LocalRegistry.class
+com\xx\easyrpc\model\RpcResponse.class
+com\xx\easyrpc\model\RpcRequest.class
+com\xx\easyrpc\model\RpcRequest$RpcRequestBuilder.class

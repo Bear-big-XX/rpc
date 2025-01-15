@@ -1,0 +1,5 @@
+com\xx\corerpc\serializer\SerializerKeys.class
+com\xx\corerpc\serializer\JsonSerializer.class
+com\xx\corerpc\serializer\KryoSerializer.class
+com\xx\corerpc\serializer\HessianSerializer.class
+com\xx\corerpc\serializer\SerializerFactory.class

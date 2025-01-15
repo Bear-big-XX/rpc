@@ -1,0 +1,6 @@
+// 指定序列化器
+Serializer serializer = null;
+ServiceLoader<Serializer> serviceLoader = ServiceLoader.load(Serializer.class);
+for (Serializer service : serviceLoader) {
+    serializer = service;
+}
