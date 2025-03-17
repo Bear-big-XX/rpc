@@ -26,10 +26,10 @@ public class EasyConsumer {
 
 
         // 静态代理
-        UserService userService1 = new UserServiceStaticProxy();
-        User user1 = new User();
-        user1.setName("静态代理！");
-        userService1.getUser(user1);
+//        UserService userService1 = new UserServiceStaticProxy();
+//        User user1 = new User();
+//        user1.setName("静态代理！");
+//        userService1.getUser(user1);
 
         // 动态代理
         UserService userService2 = ServiceProxyFactory.getProxy(UserService.class);

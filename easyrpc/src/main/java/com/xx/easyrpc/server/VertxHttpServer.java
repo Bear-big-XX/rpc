@@ -4,6 +4,9 @@ package com.xx.easyrpc.server;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
 
+/**
+ * Vert.x服务器实例
+ */
 public class VertxHttpServer implements MyHttpServer {
 
     @Override
